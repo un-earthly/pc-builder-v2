@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { signIn } from 'next-auth/react';
-
+import Image from "next/image"
 const LoginPage = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -46,37 +46,14 @@ const LoginPage = () => {
                         />
                         <button
                             type="button"
-                            className="absolute right-3 top-1/2 transform -translate-y-1/2 focus:outline-none"
+                            className="absolute right-3 top-10 transform focus:outline-none"
                             onClick={() => setShowPassword((prevShowPassword) => !prevShowPassword)}
                         >
                             {showPassword ? (
-                                <svg
-                                    className="w-6 h-6 text-gray-600 hover:text-gray-800"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M15.536 8.464a4 4 0 010 5.657M8.464 8.464a4 4 0 015.657 0M3 3l18 18"
-                                    />
-                                </svg>
+                                <Image height={20} width={20} alt="Eye" src={"/eye.svg"} />
                             ) : (
-                                <svg
-                                    className="w-6 h-6 text-gray-600 hover:text-gray-800"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M15.536 8.464a4 4 0 110 5.657M12 14.828V9.172M7.343 12h9.314"
-                                    />
-                                </svg>
+                                <Image height={20} width={20} alt="Eye-slash.svg" src={"/eye-slash.svg"} />
+
                             )}
                         </button>
                     </div>
