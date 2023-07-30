@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth"
-import { auth } from '../../firebase.config';
+import { auth } from '../../firebase.init';
 import { useRouter } from 'next/router'
 import Link from 'next/link';
 import Image from "next/image"
 import Social from '@/components/Social';
+import { signIn } from 'next-auth/react';
 
 
 const LoginPage = () => {

@@ -20,7 +20,7 @@ export const app = getApps()[0];
 
 export const auth = getAuth(app)
 
-export const signout = (user) => {
+export const signout = () => {
     signOut(auth)
 }
 

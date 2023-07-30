@@ -1,9 +1,5 @@
 import NextAuth from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
-import { app } from "../../../../firebase.config"
-import { FirebaseAdapter } from "@next-auth/firebase-adapter"
-
-
 export const authOptions = {
   providers: [
     GoogleProvider({
@@ -12,7 +8,6 @@ export const authOptions = {
     }),
 
   ],
-  adapter: FirebaseAdapter(app),
 }
 
 export default NextAuth(authOptions)

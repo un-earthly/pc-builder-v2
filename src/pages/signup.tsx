@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { auth } from '../../firebase.config';
+import { auth } from '../../firebase.init';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useRouter } from 'next/router'
 import Social from '@/components/Social';
 import Image from "next/image"
-
+import { toast } from "react-toastify"
 const SignupPage = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -24,7 +24,7 @@ const SignupPage = () => {
 
     const handleSignup = async () => {
         if (!email || !password) {
-            alert('Please enter both email and password.');
+            toast('Please enter both email and password.');
             return;
         }
 
