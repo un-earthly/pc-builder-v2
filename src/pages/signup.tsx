@@ -1,55 +1,40 @@
 import { useState } from 'react';
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth"
 import { auth } from '../../firebase.config';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useRouter } from 'next/router'
-import Link from 'next/link';
-import Image from "next/image"
 import Social from '@/components/Social';
+import Image from "next/image"
 
-
-const LoginPage = () => {
+const SignupPage = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const router = useRouter()
+
     const [
-        signInWithEmailAndPassword,
+        createUserWithEmailAndPassword,
         user,
         loading,
         error,
-    ] = useSignInWithEmailAndPassword(auth);
-    const router = useRouter()
-
+    ] = useCreateUserWithEmailAndPassword(auth);
     if (typeof window !== 'undefined') {
         const referrer = document.referrer;
         sessionStorage.setItem('loginReferrer', referrer);
     }
 
-
-    if (error) {
-        return (
-            <div className="flex items-center justify-center flex-col min-h-screen text-red-500 lg:text-3xl  bg-gray-100">
-                <p>Error: {error.message}</p>
-                <button className="px-10 py-2 bg-indigo-500 hover:bg-indigo-600 duration-100 text-white mt-3 text-base rounded-full " >
-                    <Link href="/signup">Sign Up</Link></button>
-            </div>
-        );
-    }
-    if (loading) {
-        return <div className="flex items-center justify-center flex-col min-h-screen text-teal-500 lg:text-3xl  bg-gray-100">
-            <p>Loading...</p>
-        </div>
-    }
-    const handleLogin = () => {
+    const handleSignup = async () => {
         if (!email || !password) {
             alert('Please enter both email and password.');
             return;
         }
 
-        signInWithEmailAndPassword(email, password);
+
+
+        createUserWithEmailAndPassword(email, password);
 
         if (user) {
-            console.log(user)
             const loginReferrer = sessionStorage.getItem('loginReferrer');
+
             if (loginReferrer) {
                 sessionStorage.removeItem('loginReferrer');
                 router.push(loginReferrer);
@@ -58,12 +43,25 @@ const LoginPage = () => {
             }
         }
 
-
     };
+    if (error) {
+        return (
+            <div className="flex items-center justify-center flex-col min-h-screen text-red-500 lg:text-3xl  bg-gray-100">
+                <p>Error: {error.message}</p>
+            </div>
+        );
+    }
+    if (loading) {
+        return <div className="flex items-center justify-center flex-col min-h-screen text-teal-500 lg:text-3xl  bg-gray-100">
+            <p>Loading...</p>
+        </div>
+    }
     return (
-        <div className="flex items-center justify-center flex-col min-h-screen bg-gray-100">
-            <h1 className="text-2xl font-bold mb-4 text-indigo-500">Login</h1>
+        <div className="flex items-center flex-col justify-center min-h-screen bg-gray-100">
+            <h1 className="text-2xl text-indigo-500 font-bold mb-4">Signup</h1>
             <div className="w-full p-10 max-w-md pt-14 pb-7 bg-white text-black rounded-lg shadow">
+
+
                 <form>
                     <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
@@ -104,11 +102,11 @@ const LoginPage = () => {
                         </button>
                     </div>
                     <button
-                        className="w-full bg-indigo-500 hover:bg-indigo-600 transition duration-150 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        className="w-full bg-indigo-500 hover:bg-indigo-600 duration-100 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                         type="button"
-                        onClick={handleLogin}
+                        onClick={handleSignup}
                     >
-                        {!loading ? "Login" : "Loading..."}
+                        Signup
                     </button>
                 </form>
                 <Social />
@@ -117,4 +115,4 @@ const LoginPage = () => {
     );
 };
 
-export default LoginPage;
+export default SignupPage;

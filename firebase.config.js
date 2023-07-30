@@ -1,5 +1,6 @@
 import { initializeApp, getApps } from 'firebase/app';
 import 'firebase/auth';
+import { getAuth, signOut } from 'firebase/auth';
 
 export function init() {
     const firebaseConfig = {
@@ -17,4 +18,9 @@ export function init() {
 init();
 export const app = getApps()[0];
 
+export const auth = getAuth(app)
+
+export const signout = (user) => {
+    signOut(auth)
+}
 
