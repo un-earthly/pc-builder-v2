@@ -6,22 +6,17 @@ This is a clean and straightforward PC Builder website for PC parts and componen
 Table of Contents
 -----------------
 
--   [Demo](https://chat.openai.com/#demo)
--   [Features](https://chat.openai.com/#features)
--   [Technologies Used](https://chat.openai.com/#technologies-used)
--   [Getting Started](https://chat.openai.com/#getting-started)
--   [Usage](https://chat.openai.com/#usage)
--   [API Endpoints](https://chat.openai.com/#api-endpoints)
--   [Authentication (Bonus)](https://chat.openai.com/#authentication-bonus)
--   [Responsive Design (Bonus)](https://chat.openai.com/#responsive-design-bonus)
--   [Deployment](https://chat.openai.com/#deployment)
--   [Contributing](https://chat.openai.com/#contributing)
--   [License](https://chat.openai.com/#license)
+-   [Demo](#demo)
+-   [Features](#features)
+-   [Technologies Used](#technologies-used)
+-   [Getting Started](#getting-started)
+-   [Usage](#usage)
+-   [API Endpoints](#api-endpoints)
 
 Demo
 ----
 
-You can view a live demo of the PC Builder website at [Live Demo Link](https://chat.openai.com/insert_live_demo_link_here).
+You can view a live demo of the PC Builder website at [Live Demo Link](insert_live_demo_link_here).
 
 Features
 --------
@@ -51,8 +46,9 @@ Technologies Used
 
 -   Next.js
 -   React
--   Redux (optional) / Context API (optional)
--   NextAuth.js (optional)
+-   Redux 
+-   NextAuth.js
+-   Firebase
 -   CSS (styled-components, Bootstrap, or any other CSS framework)
 
 Getting Started
@@ -64,26 +60,27 @@ To run this project locally, follow these steps:
 
 bashCopy code
 
-`git clone <repository_url>
-cd pc-builder-website`
+```
+git clone https://github.com/un-earthly/pc-builder-v2
+cd pc-builder-v2
+```
 
-Save to grepper
 
 1.  Install the dependencies:
 
-Copy code
 
-`npm install`
+```
+yarn
+```
 
-Save to grepper
 
 1.  Run the development server:
 
-arduinoCopy code
 
-`npm run dev`
+```
+yarn dev
+```
 
-Save to grepper
 
 1.  Open your browser and navigate to `http://localhost:3000` to view the website.
 
@@ -102,31 +99,3 @@ API Endpoints
 -------------
 
 If you are using a separate backend for managing product data, list the API endpoints here.
-
-Authentication (Bonus)
-----------------------
-
-To enable user authentication using NextAuth.js, follow these steps:
-
-1.  Set up your preferred social login provider(s) (Google/Github) and obtain the necessary credentials.
-2.  Update the NextAuth.js configuration with the appropriate credentials and providers.
-
-Responsive Design (Bonus)
--------------------------
-
-The website is designed to be responsive, ensuring optimal user experience across various devices and screen sizes.
-
-Deployment
-----------
-
-The PC Builder website can be deployed on platforms like Vercel or any other preferred hosting service.
-
-Contributing
-------------
-
-Contributions are welcome! If you find any bugs or have suggestions for improvements, feel free to open an issue or submit a pull request.
-
-License
--------
-
-This project is licensed under the [MIT License](https://chat.openai.com/LICENSE).
