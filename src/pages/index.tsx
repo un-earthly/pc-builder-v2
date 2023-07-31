@@ -2,6 +2,8 @@ import ProductCard from "@/components/ProductCard";
 import { Product } from "@/interface/product.interface";
 import { collection, getDocs } from "@firebase/firestore";
 import { db } from "../../firebase.init";
+import { useDispatch } from "react-redux";
+import { setProducts } from "@/redux/slices/productSlice";
 export default function Home({ productsData }: any) {
   const featuredCategories = [
     "cpu"
@@ -20,10 +22,11 @@ export default function Home({ productsData }: any) {
     {/* {featuredCategories.map(cat => {
       div
     })} */}
-   
+
   </div>
 }
 export const getStaticProps = async () => {
+  const dispatch = useDispatch()
   const productsRef = collection(db, 'products');
   const snapshot = await getDocs(productsRef);
 
@@ -31,6 +34,7 @@ export const getStaticProps = async () => {
     const data = doc.data() as Product;
     return { ...data, id: doc.id };
   });
+  dispatch(setProducts(productsData))
   return {
     props: {
       productsData,

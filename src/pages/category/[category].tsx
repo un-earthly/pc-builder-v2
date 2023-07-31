@@ -3,11 +3,12 @@ import { collection, getDocs, query, where } from '@firebase/firestore';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { db } from '../../../firebase.init';
+import ProductCard from '@/components/ProductCard';
 
 const fetchCategoryData = async (category: string) => {
     const productsRef = collection(db, 'products');
 
-    const q = query(productsRef, where('category', '==', category));
+    const q = query(productsRef, where('category', '==', category.toUpperCase()));
 
     const snapshot = await getDocs(q);
 
@@ -25,8 +26,13 @@ const CategoryPage = ({ data }: { data: any }) => {
     const { category } = router.query;
 
     return (
-        <div>
-            <h1>Category: {category}</h1>
+        <div className='bg-gray-100 min-h-screen'>
+
+            <div className='grid lg:grid-cols-3 gap-10 p-10 md:grid-cols-2 '>
+                {
+                    data.map(p => <ProductCard product={p} />)
+                }
+            </div>
         </div>
     );
 };
