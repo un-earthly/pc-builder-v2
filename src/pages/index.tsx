@@ -12,7 +12,7 @@ export default function Home({ productsData }: any) {
     <div className="bg-gray-100">
       <h1>Featured Products</h1>
       <div className="grid grid-cols-3 gap-4">
-        {productsData?.map((product: Product) => <ProductCard product={product} />)}
+        {productsData?.map((product: Product) => <ProductCard key={product.id} product={product} />)}
       </div>
     </div>
 
