@@ -5,9 +5,9 @@ import { db } from "../../firebase.init";
 import { useDispatch } from "react-redux";
 import { setProducts } from "@/redux/slices/productSlice";
 export default function Home({ productsData }: any) {
-  const featuredCategories = [
-    "cpu"
-  ]
+  const dispatch = useDispatch()
+
+  dispatch(setProducts(productsData))
   return <div>
     <div className="bg-gray-100">
       <h1>Featured Products</h1>
@@ -26,7 +26,6 @@ export default function Home({ productsData }: any) {
   </div>
 }
 export const getStaticProps = async () => {
-  const dispatch = useDispatch()
   const productsRef = collection(db, 'products');
   const snapshot = await getDocs(productsRef);
 
@@ -34,7 +33,7 @@ export const getStaticProps = async () => {
     const data = doc.data() as Product;
     return { ...data, id: doc.id };
   });
-  dispatch(setProducts(productsData))
+
   return {
     props: {
       productsData,
