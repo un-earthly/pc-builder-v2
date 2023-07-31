@@ -1,0 +1,314 @@
+[
+    {
+        "image": "https://www.startech.com.bd/image/cache/catalog/processor/Intel/i7-10700k/i7-10700k-500x500.jpg",
+        "name": "Intel Core i7 Processor",
+        "category": "CPU / Processor",
+        "status": "In Stock",
+        "price": 299.99,
+        "description": "The Intel Core i7 Processor is a high-performance CPU designed for gaming and multitasking.",
+        "keyFeatures": [
+            "Brand: Intel",
+            "Model: Core i7",
+            "Cores: 8",
+            "Threads: 16",
+            "Clock Speed: 3.6 GHz"
+        ],
+        "individualRating": 4,
+        "averageRating": 4.5,
+        "reviews": [
+            {
+                "userId": "user123",
+                "rating": 5,
+                "comment": "Excellent processor! Fast and reliable.",
+                "date": "2023-07-26T10:30:00.000Z"
+            },
+            {
+                "userId": "gamerGirl",
+                "rating": 4,
+                "comment": "Good CPU for gaming, but can get hot.",
+                "date": "2023-07-25T15:45:00.000Z"
+            }
+        ]
+    },
+    {
+        "image": "https://www.startech.com.bd/image/cache/catalog/motherboard/asus/rog-strix-b560-i-gaming-wi-fi/rog-strix-b560-i-gaming-wi-fi-500x500.jpg",
+        "name": "Asus ROG Strix Motherboard",
+        "category": "Motherboard",
+        "status": "Out of stock",
+        "price": 199.99,
+        "description": "The Asus ROG Strix Motherboard is a high-end motherboard with advanced features for gaming enthusiasts.",
+        "keyFeatures": [
+            "Brand: Asus",
+            "Model: ROG Strix",
+            "Socket: LGA1200",
+            "Form Factor: ATX",
+            "Memory Slots: 4"
+        ],
+        "individualRating": 4,
+        "averageRating": 4.2,
+        "reviews": [
+            {
+                "userId": "gamerGuy",
+                "rating": 5,
+                "comment": "Best motherboard for gaming! Easy to overclock.",
+                "date": "2023-07-24T12:15:00.000Z"
+            },
+            {
+                "userId": "techNerd",
+                "rating": 3,
+                "comment": "Decent motherboard, but had some compatibility issues.",
+                "date": "2023-07-23T09:00:00.000Z"
+            }
+        ]
+    },
+    {
+        "image": "https://www.startech.com.bd/image/cache/catalog/ram/cosair/vengeance-rgb-pro-ram-kit-white/vengeance-rgb-pro-ram-kit-white-01-500x500.jpg",
+        "name": "Corsair Vengeance RGB Pro RAM",
+        "category": "RAM",
+        "status": "In Stock",
+        "price": 89.99,
+        "description": "The Corsair Vengeance RGB Pro RAM offers excellent performance and customizable RGB lighting.",
+        "keyFeatures": [
+            "Brand: Corsair",
+            "Model: Vengeance RGB Pro",
+            "Capacity: 16GB (2x8GB)",
+            "Speed: 3200MHz",
+            "CAS Latency: 16"
+        ],
+        "individualRating": 4.5,
+        "averageRating": 4.8,
+        "reviews": [
+            {
+                "userId": "gamerDude",
+                "rating": 5,
+                "comment": "Fast and reliable RAM. Great for gaming.",
+                "date": "2023-07-22T17:30:00.000Z"
+            },
+            {
+                "userId": "techGeek",
+                "rating": 5,
+                "comment": "Beautiful RGB lighting effects. Highly recommended.",
+                "date": "2023-07-21T14:20:00.000Z"
+            }
+        ]
+    },
+    {
+        "image": "https://www.startech.com.bd/image/cache/catalog/power-supply/gigabyte/p750gm/p750gm-500x500.jpg",
+        "name": "Gigabyte Supernova 750W PSU",
+        "category": "Power Supply Unit",
+        "status": "In Stock",
+        "price": 129.99,
+        "description": "The Gigabyte Supernova 750W PSU provides reliable power delivery for high-performance PCs.",
+        "keyFeatures": [
+            "Brand: Gigabyte",
+            "Model: Supernova",
+            "Wattage: 750W",
+            "80 Plus Certification: Gold",
+            "Modular Cables: Yes"
+        ],
+        "individualRating": 4.2,
+        "averageRating": 4.6,
+        "reviews": [
+            {
+                "userId": "pcBuilder123",
+                "rating": 4,
+                "comment": "Solid power supply, but a bit pricey.",
+                "date": "2023-07-20T11:45:00.000Z"
+            },
+            {
+                "userId": "gamingEnthusiast",
+                "rating": 4,
+                "comment": "Good PSU, but could use more connectors.",
+                "date": "2023-07-19T09:10:00.000Z"
+            }
+        ]
+    },
+    {
+        "image": "https://www.startech.com.bd/image/cache/catalog/ssd/samsung/990-pro-1tb/990-pro-1tb-01-500x500.webp",
+        "name": "Samsung 1TB NVMe SSD",
+        "category": "Storage Device",
+        "status": "In Stock",
+        "price": 179.99,
+        "description": "The Samsung 1TB NVMe SSD offers lightning-fast read and write speeds for data-intensive tasks.",
+        "keyFeatures": [
+            "Brand: Samsung",
+            "Model: 970 EVO",
+            "Capacity: 1TB",
+            "Interface: PCIe Gen 3.0 x4",
+            "Read Speed: 3500 MB/s",
+            "Write Speed: 2500 MB/s"
+        ],
+        "individualRating": 4.8,
+        "averageRating": 4.9,
+        "reviews": [
+            {
+                "userId": "dataHoarder",
+                "rating": 5,
+                "comment": "Blazing-fast SSD. Perfect for video editing.",
+                "date": "2023-07-18T16:55:00.000Z"
+            },
+            {
+                "userId": "techEnthusiast",
+                "rating": 5,
+                "comment": "Best NVMe SSD in the market.",
+                "date": "2023-07-17T13:40:00.000Z"
+            }
+        ]
+    },
+    {
+        "image": "https://www.startech.com.bd/image/cache/catalog/monitor/asus/pg278qe/pg278qe-1-500x500.jpg",
+        "name": "Asus ROG Swift 27\" Monitor",
+        "category": "Monitor",
+        "status": "Out of stock",
+        "price": 599.99,
+        "description": "The Asus ROG Swift 27\" Monitor offers a high refresh rate and G-Sync support for smooth gaming.",
+        "keyFeatures": [
+            "Brand: Asus",
+            "Model: ROG Swift",
+            "Screen Size: 27\"",
+            "Resolution: 2560x1440",
+            "Refresh Rate: 165Hz",
+            "Panel Type: IPS"
+        ],
+        "individualRating": 4.6,
+        "averageRating": 4.4,
+        "reviews": [
+            {
+                "userId": "gamingPro",
+                "rating": 5,
+                "comment": "Amazing gaming monitor. No screen tearing.",
+                "date": "2023-07-16T09:30:00.000Z"
+            },
+            {
+                "userId": "techGuru",
+                "rating": 4,
+                "comment": "Great colors and sharp image quality.",
+                "date": "2023-07-15T12:20:00.000Z"
+            }
+        ]
+    },
+    {
+        "image": "https://www.startech.com.bd/image/cache/catalog/mouse/logitech/g502x/g502x-white-500x500.webp",
+        "name": "Logitech G Pro X Keyboard",
+        "category": "Others",
+        "status": "In Stock",
+        "price": 149.99,
+        "description": "The Logitech G Pro X Keyboard is a mechanical gaming keyboard with customizable RGB lighting.",
+        "keyFeatures": [
+            "Brand: Logitech",
+            "Model: G Pro X",
+            "Switch Type: Clicky",
+            "Key Rollover: N-key",
+            "Anti-Ghosting: Yes"
+        ],
+        "individualRating": 4.2,
+        "averageRating": 4.0,
+        "reviews": [
+            {
+                "userId": "gamer123",
+                "rating": 4,
+                "comment": "Nice keyboard, but a bit too loud.",
+                "date": "2023-07-14T14:15:00.000Z"
+            },
+            {
+                "userId": "pcEnthusiast",
+                "rating": 4,
+                "comment": "Good build quality, but could use more programmable keys.",
+                "date": "2023-07-13T10:05:00.000Z"
+            }
+        ]
+    },
+    {
+        "image": "https://www.startech.com.bd/image/cache/catalog/graphics-card/gigabyte/rtx-3080-oc/rtx-3080-oc-01-500x500.jpg",
+        "name": "Gigabyte GeForce RTX 3080 GPU",
+        "category": "Others",
+        "status": "In Stock",
+        "price": 899.99,
+        "description": "The Gigabyte GeForce RTX 3080 GPU offers top-tier performance for gaming and graphics-intensive tasks.",
+        "keyFeatures": [
+            "Brand: Gigabyte",
+            "Model: GeForce RTX 3080",
+            "VRAM: 10GB GDDR6X",
+            "CUDA Cores: 8704",
+            "Clock Speed: 1755 MHz"
+        ],
+        "individualRating": 4.9,
+        "averageRating": 4.7,
+        "reviews": [
+            {
+                "userId": "gamerPro",
+                "rating": 5,
+                "comment": "Beast of a GPU. Handles 4K gaming like a champ.",
+                "date": "2023-07-12T16:30:00.000Z"
+            },
+            {
+                "userId": "techMaster",
+                "rating": 4,
+                "comment": "Great graphics card, but runs hot under load.",
+                "date": "2023-07-11T11:50:00.000Z"
+            }
+        ]
+    },
+    {
+        "image": "https://www.startech.com.bd/image/cache/catalog/graphics-card/gigabyte/rtx-3080-oc/rtx-3080-oc-01-500x500.jpg",
+        "name": "Corsair Dark Core RGB Mouse",
+        "category": "Others",
+        "status": "Out of stock",
+        "price": 79.99,
+        "description": "The Corsair Dark Core RGB Mouse is a wireless gaming mouse with customizable RGB lighting and high DPI.",
+        "keyFeatures": [
+            "Brand: Corsair",
+            "Model: Dark Core RGB",
+            "Wireless: Yes",
+            "DPI: 16000",
+            "Buttons: 9"
+        ],
+        "individualRating": 4.5,
+        "averageRating": 4.3,
+        "reviews": [
+            {
+                "userId": "gamerPro123",
+                "rating": 5,
+                "comment": "Comfortable grip and accurate tracking.",
+                "date": "2023-07-10T14:45:00.000Z"
+            },
+            {
+                "userId": "techGuru1",
+                "rating": 4,
+                "comment": "Good wireless mouse, but the battery life could be better.",
+                "date": "2023-07-09T09:20:00.000Z"
+            }
+        ]
+    },
+    {
+        "image": "https://www.startech.com.bd/image/cache/catalog/graphics-card/gigabyte/rtx-3080-oc/rtx-3080-oc-01-500x500.jpg",
+        "name": "Samsung 34\" Curved Monitor",
+        "category": "Monitor",
+        "status": "In Stock",
+        "price": 549.99,
+        "description": "The Samsung 34\" Curved Monitor offers an immersive ultrawide display for multitasking and gaming.",
+        "keyFeatures": [
+            "Brand: Samsung",
+            "Model: Curved Monitor",
+            "Screen Size: 34\"",
+            "Aspect Ratio: 21:9",
+            "Resolution: 3440x1440"
+        ],
+        "individualRating": 4.6,
+        "averageRating": 4.4,
+        "reviews": [
+            {
+                "userId": "multitasker",
+                "rating": 5,
+                "comment": "Great for multitasking. Love the ultrawide display.",
+                "date": "2023-07-08T11:35:00.000Z"
+            },
+            {
+                "userId": "gamingFan",
+                "rating": 4,
+                "comment": "Good monitor for gaming, but wish it had higher refresh rate.",
+                "date": "2023-07-07T15:00:00.000Z"
+            }
+        ]
+    }
+]

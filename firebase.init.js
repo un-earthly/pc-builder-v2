@@ -1,7 +1,8 @@
+import { getFirestore } from '@firebase/firestore';
 import { initializeApp, getApps } from 'firebase/app';
 import 'firebase/auth';
 import { getAuth, signOut } from 'firebase/auth';
-
+import { getDatabase } from "firebase/database"
 export function init() {
     const firebaseConfig = {
         apiKey: "AIzaSyAeN0pUSQ5p_jrypxL-HI5brNnFjLEu_Ko",
@@ -19,6 +20,7 @@ init();
 export const app = getApps()[0];
 
 export const auth = getAuth(app)
+export const db = getFirestore()
 
 export const signout = () => {
     signOut(auth)
