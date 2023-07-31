@@ -30,7 +30,7 @@ const CategoryPage = ({ data }: { data: any }) => {
 
             <div className='grid lg:grid-cols-3 gap-10 p-10 md:grid-cols-2 '>
                 {
-                    data.map(p => <ProductCard product={p} />)
+                    data.map((p:Product) => <ProductCard key={p.id} product={p} />)
                 }
             </div>
         </div>
