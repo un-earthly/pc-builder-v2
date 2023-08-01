@@ -11,7 +11,6 @@ const PCBuilderPage = () => {
     const dispatch = useDispatch();
     const router = useRouter();
 
-    console.log({ selectedComponents })
 
     const handleRemoveComponent = (category: string) => {
         dispatch(removeSelectedComponent(category));

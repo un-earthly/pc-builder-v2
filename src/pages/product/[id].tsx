@@ -3,13 +3,26 @@ import { Product } from '@/interface/product.interface';
 import { db } from '../../../firebase.init';
 import { collection, getDocs, doc, getDoc } from "firebase/firestore"
 import ReviewItem from '@/components/ReviewCard';
+import { useRouter } from 'next/router';
 
 interface ProductDetailsProps {
     product: Product;
 }
 
 const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
+    const router = useRouter();
+
+    if (router.isFallback) {
+        return <div>Loading...</div>;
+    }
+
+    if (!product) {
+        return <div>Product not found.</div>;
+    }
+
     const { reviews, image, keyFeatures, ...productDetails } = product;
+    const hasReviews = Array.isArray(reviews) && reviews.length > 0;
+
     return (
         <>
             <section className="text-gray-700 body-font overflow-hidden bg-white">
@@ -48,10 +61,16 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
                             </div>
                         </div>
                         <div>
-                            {reviews.map((item, index) => (
-                                <ReviewItem review={item} key={index} />
-                            ))}
-                       </div>
+                            {hasReviews && (
+                                <div>
+                                    <h2>Reviews:</h2>
+                                    {reviews.map((item, index) => (
+                                        <ReviewItem review={item} key={index} />
+                                    ))}
+                                </div>
+                            )}
+                            {!hasReviews && <p>No reviews available.</p>}
+                        </div>
                     </div>
                 </div>
             </section>

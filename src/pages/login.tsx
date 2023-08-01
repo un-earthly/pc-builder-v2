@@ -49,7 +49,6 @@ const LoginPage = () => {
         signInWithEmailAndPassword(email, password);
 
         if (user) {
-            console.log(user)
             const loginReferrer = sessionStorage.getItem('loginReferrer');
             if (loginReferrer) {
                 sessionStorage.removeItem('loginReferrer');

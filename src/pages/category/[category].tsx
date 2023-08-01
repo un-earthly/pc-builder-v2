@@ -21,7 +21,6 @@ const fetchCategoryData = async (category: string) => {
 };
 
 const CategoryPage = ({ data }: { data: any }) => {
-    console.log(data)
     const router = useRouter();
     const { category } = router.query;
 
@@ -30,7 +29,7 @@ const CategoryPage = ({ data }: { data: any }) => {
 
             <div className='grid lg:grid-cols-3 gap-10 p-10 md:grid-cols-2 '>
                 {
-                    data.map((p:Product) => <ProductCard key={p.id} product={p} />)
+                    data.map((p: Product) => <ProductCard key={p.id} product={p} />)
                 }
             </div>
         </div>

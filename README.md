@@ -96,7 +96,3 @@ Usage
 -   When you have at least 5-6 components added, the "Complete Build" button will become clickable.
 -   Click the "Complete Build" button to complete your PC build.
 
-API Endpoints
--------------
-
-If you are using a separate backend for managing product data, list the API endpoints here.
