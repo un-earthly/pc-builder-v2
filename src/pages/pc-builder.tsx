@@ -1,18 +1,17 @@
 import PrivateRoute from "@/components/PrivateRoute";
-import { Product } from "@/interface/product.interface";
-import { removeSelectedComponent, setSelectedComponent } from "@/redux/slices/pcBuilderSlice";
+import { removeSelectedComponent } from "@/redux/slices/pcBuilderSlice";
 import { RootState } from "@/redux/store";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify"
 
 const PCBuilderPage = () => {
     const selectedComponents = useSelector((state: RootState) => state.pcBuilder.selectedComponents);
-    console.log(selectedComponents)
     const dispatch = useDispatch();
     const router = useRouter();
 
-
+    console.log({ selectedComponents })
 
     const handleRemoveComponent = (category: string) => {
         dispatch(removeSelectedComponent(category));
@@ -21,9 +20,10 @@ const PCBuilderPage = () => {
     const handleCompleteBuild = () => {
         const selectedCount = Object.values(selectedComponents).filter((product) => product !== null).length;
         if (selectedCount >= 5) {
-            router.push('/complete-build');
+            toast.success("Build Successful!!!")
         } else {
-            alert('Please select at least 5 components to complete the build.');
+            toast.error("Please select at least 5 components to complete the build.!!!")
+
         }
     };
 
