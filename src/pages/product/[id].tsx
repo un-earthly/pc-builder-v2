@@ -2,6 +2,7 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import { Product } from '@/interface/product.interface';
 import { db } from '../../../firebase.init';
 import { collection, getDocs, doc, getDoc } from "firebase/firestore"
+import ReviewItem from '@/components/ReviewCard';
 
 interface ProductDetailsProps {
     product: Product;
@@ -46,13 +47,11 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
 
                             </div>
                         </div>
-                        {reviews.map((item, index) => (
-                            <li key={index} className="text-gray-500 my-2 p-4 border border-gray-300 rounded">
-                                <p>User: {item.userId}</p>
-                                <p>Rating: {item.rating}</p>
-                                <p>Comment: {item.comment}</p>
-                            </li>
-                        ))}
+                        <div>
+                            {reviews.map((item, index) => (
+                                <ReviewItem review={item} key={index} />
+                            ))}
+                       </div>
                     </div>
                 </div>
             </section>
