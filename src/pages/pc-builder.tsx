@@ -41,9 +41,9 @@ const PCBuilderPage = () => {
                                 </div>
                             ) : (
                                 <div className="flex items-center justify-between md:flex-row flex-col text-center font-semibold p-4 text-white">
-                                    <p className="text-sm">No {category} selected</p>
+                                    <p className="text-sm md:text-xl">No {category} selected</p>
                                     <Link href={`/category/${category.toLowerCase()}`} passHref>
-                                        <button className="bg-teal-400 mt-3 lg:p-3 p-1 px-3 rounded-full lg:text-lg text-xs">Select {category}</button>
+                                        <button className="bg-teal-400 mt-3 lg:px-10 p-1 px-3 rounded-full lg:text-base text-xs">Select {category}</button>
                                     </Link>
                                 </div>
                             )}
