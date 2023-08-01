@@ -39,28 +39,26 @@ export default function Home({ productsData }: any) {
     <div className="p-3" >
       <h1 className="text-center text-indigo-500 mb-4 lg:text-4xl ">Featured Products</h1>
       <div className="grid lg:grid-cols-4  md:grid-cols-2 place-items-center  gap-4">
-        {productsData?.map((product: Product) => <ProductCard key={product.id} product={product} />)}
+        {productsData?.slice(0, 8).map((product: Product) => <ProductCard key={product.id} product={product} />)}
       </div>
     </div>
 
 
     <div>
       <h1 className="text-center text-indigo-500 lg:text-4xl font-semibold my-5 ">Featured Categories</h1>
-      <div className="flex p-3 items-center justify-center space-x-10">
-        {categories.map((c: category) => <Link href={"category/" + c.category}>
-          <div className="flex items-center justify-center flex-col bg-indigo-200 hover:bg-indigo-400 p-8 rounded-xl hover:shadow-xl shadow-indigo-400 duration-100 w-36">
-            <img src={c.image} alt={c.category}></img>
-            <span className="px-4 text-indigo-950 font-bold mt-1  mx-2">{c.category.toUpperCase()}</span>
-          </div>
-        </Link>
-        )}
+      <div className="md:flex flex-wrap  items-center justify-center">
+        {categories.map((c: category, index: number) => (
+          <Link className="flex items-center justify-center m-5" key={index} href={"category/" + c.category}>
+            <div className="flex items-center justify-center flex-col bg-indigo-200 hover:bg-indigo-400 p-8
+             rounded-xl hover:shadow-xl shadow-indigo-400 duration-100 md:w-36 w-3/4">
+              <img src={c.image} alt={c.category}></img>
+              <span className="px-4 text-indigo-950 font-bold mt-1 mx-2">{c.category.toUpperCase()}</span>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
 
-
-    {/* {featuredCategories.map(cat => {
-      div
-    })} */}
 
   </div>
 }

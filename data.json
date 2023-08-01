@@ -2,7 +2,7 @@
     {
         "image": "https://www.startech.com.bd/image/cache/catalog/processor/Intel/i7-10700k/i7-10700k-500x500.jpg",
         "name": "Intel Core i7 Processor",
-        "category": "CPU / Processor",
+        "category": "CPU",
         "status": "In Stock",
         "price": 299.99,
         "description": "The Intel Core i7 Processor is a high-performance CPU designed for gaming and multitasking.",
@@ -95,7 +95,7 @@
     {
         "image": "https://www.startech.com.bd/image/cache/catalog/power-supply/gigabyte/p750gm/p750gm-500x500.jpg",
         "name": "Gigabyte Supernova 750W PSU",
-        "category": "Power Supply Unit",
+        "category": "PSU",
         "status": "In Stock",
         "price": 129.99,
         "description": "The Gigabyte Supernova 750W PSU provides reliable power delivery for high-performance PCs.",
@@ -126,7 +126,7 @@
     {
         "image": "https://www.startech.com.bd/image/cache/catalog/ssd/samsung/990-pro-1tb/990-pro-1tb-01-500x500.webp",
         "name": "Samsung 1TB NVMe SSD",
-        "category": "Storage Device",
+        "category": "Storage",
         "status": "In Stock",
         "price": 179.99,
         "description": "The Samsung 1TB NVMe SSD offers lightning-fast read and write speeds for data-intensive tasks.",
@@ -250,7 +250,7 @@
         ]
     },
     {
-        "image": "https://www.startech.com.bd/image/cache/catalog/graphics-card/gigabyte/rtx-3080-oc/rtx-3080-oc-01-500x500.jpg",
+        "image": "https://www.startech.com.bd/image/cache/catalog/mouse/logitech/g502x/g502x-white-500x500.webp",
         "name": "Corsair Dark Core RGB Mouse",
         "category": "Others",
         "status": "Out of stock",
