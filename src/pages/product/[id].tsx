@@ -10,33 +10,53 @@ interface ProductDetailsProps {
 const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
     const { reviews, image, keyFeatures, ...productDetails } = product;
     return (
-        <div className="flex items-center justify-center flex-col min-h-screen bg-gray-100">
-            <img src={image} alt="" />
-            <div className="max-w-3xl p-8 rounded">
-                {Object.entries(productDetails).map(([key, value]) => (
-                    <p key={key} className="text-gray-500 mb-2">
-                        {key}: {value}
-                    </p>
-                ))}
-            </div>
-            {Object.entries(keyFeatures).map(([key, value]) => (
-                <p key={key} className="text-gray-500 mb-2">
-                    {value}
-                </p>
-            ))}
-            <div className="mt-4">
-                <h2 className="text-xl font-semibold">Reviews:</h2>
-                <ul className="list-disc list-inside">
-                    {reviews.map((item, index) => (
-                        <li key={index} className="text-gray-500 my-2 p-4 border border-gray-300 rounded">
-                            <p>User: {item.userId}</p>
-                            <p>Rating: {item.rating}</p>
-                            <p>Comment: {item.comment}</p>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        </div>
+        <>
+            <section className="text-gray-700 body-font overflow-hidden bg-white">
+                <div className="container px-5 py-24 mx-auto">
+                    <div className="lg:w-4/5 mx-auto flex flex-wrap">
+                        <img
+                            alt="ecommerce"
+                            className="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200"
+                            src={image}
+                        />
+                        <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                            <h2 className="text-sm title-font text-gray-500 tracking-widest">{productDetails.category}</h2>
+                            <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">{productDetails.name}</h1>
+                            <div className=" mb-4">
+
+                                <p className="text-gray-600">Average Rating: {productDetails.averageRating}</p>
+                                <p className="text-gray-600">Individual Rating: {productDetails.individualRating}</p>
+
+                            </div>
+                            <p className="leading-relaxed">
+                                {productDetails.description}
+                            </p>
+                            <div className="mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
+
+                                {Object.entries(keyFeatures).map(([key, value]) => (
+                                    <p key={key} className="text-gray-500 mb-2">
+                                        {value}
+                                    </p>
+                                ))}
+
+                                <p className='bg-teal-500 text-white px-5 font-semibold'>{productDetails.status}</p>
+                            </div>
+                            <div className="flex">
+                                <span className="title-font font-medium text-2xl text-gray-900">Price : ${productDetails.price}</span>
+
+                            </div>
+                        </div>
+                        {reviews.map((item, index) => (
+                            <li key={index} className="text-gray-500 my-2 p-4 border border-gray-300 rounded">
+                                <p>User: {item.userId}</p>
+                                <p>Rating: {item.rating}</p>
+                                <p>Comment: {item.comment}</p>
+                            </li>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        </>
     );
 };
 
