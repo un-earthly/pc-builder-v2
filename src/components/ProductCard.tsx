@@ -29,7 +29,7 @@ const ProductCard: React.FC<any> = ({ product }) => {
                 <button
                     onClick={() => {
                         handleSelectComponent(product.category, product);
-                        router.push("/builder");
+                        router.push("/pc-builder");
                     }}
                     className="py-2 px-4 bg-blue-500 text-white rounded capitalize hover:bg-blue-600 active:bg-blue-700 disabled:opacity-50 mt-4 w-full flex items-center justify-center">
                     Add to pc Builder
