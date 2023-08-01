@@ -16,7 +16,7 @@ Table of Contents
 Demo
 ----
 
-You can view a live demo of the PC Builder website at [Live Demo Link](https://pc-builder-v2-sigma.vercel.app/).
+You can view a live demo of the ZABUILD PC Builder website at [Live Demo Link](https://pc-builder-v2-sigma.vercel.app/).
 You can view a Code of the PC Builder website at [Live Code Link](https://github.com/un-earthly/pc-builder-v2).
 
 Features
